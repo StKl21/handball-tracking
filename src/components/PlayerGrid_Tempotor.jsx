@@ -9,18 +9,20 @@ import {
   InputLabel,
   FormControl
 } from '@mui/material';
-import ActionDialog from './ActionDialog';
+import ActionDialog from './ActionDialog_Tempotor';
 import TorwartDialog from './TorwartDialog';
 
 function PlayerGrid({ game, actions, onSaveAction, squad, currentTime }) {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [isGoalie, setIsGoalie] = useState(false);
 
   const [selectedPlayerFilter, setSelectedPlayerFilter] = useState('all');
   const [minTimeFilter, setMinTimeFilter] = useState('');
 
   const handlePlayerClick = (player) => {
     setSelectedPlayer(player);
+    setIsGoalie(player.position === 'TW');
     setDialogOpen(true);
   };
 
@@ -62,7 +64,7 @@ function PlayerGrid({ game, actions, onSaveAction, squad, currentTime }) {
         ))}
       </Grid>
 
-      {selectedPlayer?.position === 'TW' ? (
+      {selectedPlayer && isGoalie ? (
         <TorwartDialog
           open={dialogOpen}
           onClose={() => setDialogOpen(false)}
@@ -121,7 +123,7 @@ function PlayerGrid({ game, actions, onSaveAction, squad, currentTime }) {
               {a.player?.firstName} {a.player?.lastName} – {a.action} –{' '}
               {a.gameTime || '??:??'} – Halbzeit {a.half}
               {a.zone && ` – Zone: ${a.zone}`}
-              {a.tempoType && ` – Tempotor: ${a.tempoType}`}
+              {a.tempotor && ` – Tempotor: ${a.tempotor}`}
             </li>
           ))}
           {filteredActions.length === 0 && <li>Keine passenden Aktionen gefunden.</li>}

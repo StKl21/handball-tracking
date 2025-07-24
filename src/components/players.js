@@ -1,0 +1,21 @@
+export const players = [
+  { id: 1, firstName: "Rico", lastName: "Petruzzi", position: "TW" },
+  { id: 2, firstName: "Lukas", lastName: "Wilhelm", position: "TW" },
+  { id: 3, firstName: "Julian", lastName: "Blum", position: "LA" },
+  { id: 4, firstName: "Felix", lastName: "Weinmann", position: "LA" },
+  { id: 5, firstName: "Marvin", lastName: "Thumm", position: "RL" },
+  { id: 6, firstName: "Felix", lastName: "Mendler", position: "RL" },
+  { id: 7, firstName: "Simon", lastName: "Dudium", position: "RL" },
+  { id: 8, firstName: "Nico", lastName: "Hutzel", position: "RL" },
+  { id: 9, firstName: "Lasse", lastName: "Schäfer", position: "RL" },
+  { id: 10, firstName: "Lukas", lastName: "Francik", position: "RM" },
+  { id: 11, firstName: "Felix", lastName: "Prawatschke", position: "RM" },
+  { id: 12, firstName: "Jonas", lastName: "Jacobs", position: "RR" },
+  { id: 13, firstName: "Patrick", lastName: "Kohl", position: "RR" },
+  { id: 14, firstName: "Phillip", lastName: "Grüb", position: "RR" },
+  { id: 15, firstName: "Marc", lastName: "Wieder", position: "RA" },
+  { id: 16, firstName: "Moritz", lastName: "Bittner", position: "RA" },
+  { id: 17, firstName: "Mattis", lastName: "Wittmann", position: "RA" },
+  { id: 18, firstName: "Lukas", lastName: "Mäußnest", position: "KM" },
+  { id: 19, firstName: "Johannes", lastName: "Schmid", position: "KM" }
+];
